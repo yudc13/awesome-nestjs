@@ -4,11 +4,11 @@ import { UserService } from './user.service';
 
 @Controller('user')
 export class UserController {
-  constructor(private readonly userService: UserService) {}
+	constructor(private readonly userService: UserService) {}
 
-  @HttpCode(HttpStatus.OK)
-  @Post()
-  create(@Body() createUserDto: CreateUserDto) {
-    return this.userService.create(createUserDto);
-  }
+	@HttpCode(HttpStatus.OK)
+	@Post()
+	create(@Body() createUserDto: CreateUserDto) {
+		return this.userService.create(createUserDto);
+	}
 }
