@@ -6,6 +6,10 @@ import { CreateUserDto } from './dto/create-user.dto';
 export class UserService {
 	constructor(private readonly prismaService: PrismaService) {}
 
+	async findUserList() {
+		return this.prismaService.user.findMany();
+	}
+
 	/**
 	 * 创建用户
 	 * @param createUserDto
